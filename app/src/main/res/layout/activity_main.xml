@@ -6,11 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.swt.ijkplayer_demo.VideoPlayer
+
+    <com.swt.ijkplayer_demo.IjkVideoView
         android:id="@+id/player"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#54000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/btn_peter_play" />
+
+
+        <TextView
+            android:id="@+id/time_play_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="5dp"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/vudioSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+            android:indeterminateOnly="false"
+            android:maxHeight="2dp"
+            android:max="100"
+            android:minHeight="2dp"
+            android:progressDrawable="@drawable/sp_radio_seekbar"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="1dp" />
+
+        <TextView
+            android:id="@+id/time_toal_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/btn_screen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_peter_full" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
